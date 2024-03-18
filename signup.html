@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-up</title>
+</head>
+<body>
+    <h1>Sign up</h1>
+    <form action="mailto:gorne.162504140044@depedqc.ph" method="post" enctype="text/plain" id="signup">
+        <fieldset>
+            <legend>Username:</legend>
+            <input type="text" id="user" name="Username">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Email:</legend>
+            <input type="email" id="email" name="Email">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Password:</legend>
+            <input type="password" id="pass" name="Password">
+        </fieldset>
+    </form>
+    <button type="button" onclick="Sign()">Sign up</button>
+    <script>
+        function Sign() {
+            var user = document.getElementById("user");
+            var pass = document.getElementById("pass");
+            var email = document.getElementById("email");
+            var username = user.value;
+            var password = pass.value;
+            var us = JSON.stringify(username);
+            var ps = JSON.stringify(password);
+        
+            localStorage.setItem("username", us);
+            localStorage.setItem("password", ps);
+        
+            user.value = "";
+            pass.value = "";
+            email.value = "";
+
+            window.location.href = "registration.html";
+        }
+
+    </script>
+</body>
+</html>
