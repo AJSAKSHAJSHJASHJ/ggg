@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instructions</title>
+    <link href="instruct.css" rel="stylesheet">
+</head>
+<body>
+    <p id="head">Instructions</p>
+    <p id="subhead">In this game, player 1 needs to chase player 2. If Player 1 touches player 2 more during the time period, Player 1 wins, if Player 2 manages to get away and not let Player 1 touch Player 2, Player 2 wins.</p>
+    <p id="subinst">Kindly read before playing. Press the dropdown box to select an move and its instruction on how to do it</p>
+    <fieldset>
+        <legend>Player 1</legend>
+        <select id="plyr1">
+            <option value="">Please select here</option>
+            <option value="Press D to move forward">Forward</option>
+            <option value="Press A to move backward">Backward</option>
+            <option value="Press W to jump">Jump</option>
+        </select>
+    </fieldset>
+    
+    <br>
+
+    <fieldset>
+        <legend>Player 2</legend>
+        <select id="plyr2">
+            <option value="">Please select here</option>
+            <option value="Press the right arrow to move forward">Forward</option>
+            <option value="Press the left arrow to move backward">Backward</option>
+            <option value="Press the Up arrow to jump">Jump</option>
+        </select>
+    </fieldset>
+
+    <br>
+    <button type="button" onclick="Show()">Show Instruction</button>
+    <br>
+    <p id="instruct"></p>
+    <br>
+    <br>
+    <button type="button" onclick="Game()">Enter the Game</button>
+    <button type="button" onclick="back()">Back</button>
+    <script src="instruct.js"></script>
+</body>
+</html>
